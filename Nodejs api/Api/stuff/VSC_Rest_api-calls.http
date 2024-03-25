@@ -1,0 +1,67 @@
+
+
+GET http://localhost:30000/api/allusers
+
+
+
+//login
+POST http://localhost:30000/api/login HTTP/1.1
+content-type: application/json
+
+{
+    "username": "user1",
+    "password": "hashed_password_1"
+}
+
+//register
+POST http://localhost:30000/api/register HTTP/1.1
+content-type: application/json
+
+{
+    "username": "sadasdda",
+    "password": "123",
+    "display_name": "asddads",
+    "email": "RMS@gmail.com"
+}
+
+
+//get profile info
+POST http://localhost:30000/api/getprofile HTTP/1.1
+content-type: application/json
+
+{
+    "userid": "18"
+    
+}
+
+//update profileinfo
+POST http://localhost:30000/api/updateProfile HTTP/1.1
+content-type: application/json
+
+{
+    "userid": "1",
+    "pfp": " ",
+    "display_name": "user1",
+    "bio":"yes",
+    "location":"I'm in your walls"
+}
+
+
+
+POST /api/login HTTP/1.1
+Host: localhost:30000
+Content-Length: 244
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW
+
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="username"
+
+user1
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="password"
+
+hashed_password_1
+------WebKitFormBoundary7MA4YWxkTrZu0gW--
+
+
+
